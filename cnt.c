@@ -18,9 +18,8 @@ int main(int argc, char **argv) {
 
   while ((e = readdir(dirp)))
     fcnt += e->d_type == DT_REG;
+  closedir(dir);
 
   printf("%d\n", fcnt);
-  
-  closedir(dir);
   return 0;
 }

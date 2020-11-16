@@ -20,5 +20,7 @@ int main(int argc, char **argv) {
     fcnt += e->d_type == DT_REG;
 
   printf("%d\n", fcnt);
+  
+  closedir(dir);
   return 0;
 }
